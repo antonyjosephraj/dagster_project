@@ -1,0 +1,28 @@
+[32m2023-10-24 19:41:45 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - d5cfb326-1607-426f-a188-9254a587a962 - 43280 - LOGS_CAPTURED - Started capturing logs in process (pid: 43280).
+[32m2023-10-24 19:41:45 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - d5cfb326-1607-426f-a188-9254a587a962 - 43280 - manhattan_map - STEP_START - Started execution of step "manhattan_map".
+[32m2023-10-24 19:41:48 +0530[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - d5cfb326-1607-426f-a188-9254a587a962 - 43280 - manhattan_map - STEP_FAILURE - Execution of step "manhattan_map" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "manhattan_map"::
+
+ValueError: 
+Image export using the "kaleido" engine requires the kaleido package,
+which can be installed using pip:
+    $ pip install -U kaleido
+
+
+Stack Trace:
+  File "C:\Users\AntonyJosephRaj\antony5\test2\lib\site-packages\dagster\_core\execution\plan\utils.py", line 54, in op_execution_error_boundary
+    yield
+  File "C:\Users\AntonyJosephRaj\antony5\test2\lib\site-packages\dagster\_utils\__init__.py", line 443, in iterate_with_context
+    next_output = next(iterator)
+  File "C:\Users\AntonyJosephRaj\antony5\test2\lib\site-packages\dagster\_core\execution\plan\compute_generator.py", line 132, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+  File "C:\Users\AntonyJosephRaj\antony5\test2\lib\site-packages\dagster\_core\execution\plan\compute_generator.py", line 126, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+  File "C:\Users\AntonyJosephRaj\antony5\dagster_university\dagster_university\metrics.py", line 59, in manhattan_map
+    pio.write_image(fig, constants.MANHATTAN_MAP_FILE_PATH)
+  File "C:\Users\AntonyJosephRaj\antony5\test2\lib\site-packages\plotly\io\_kaleido.py", line 267, in write_image
+    img_data = to_image(
+  File "C:\Users\AntonyJosephRaj\antony5\test2\lib\site-packages\plotly\io\_kaleido.py", line 133, in to_image
+    raise ValueError(
+[0m

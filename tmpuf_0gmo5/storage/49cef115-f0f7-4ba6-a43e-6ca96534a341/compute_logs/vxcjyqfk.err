@@ -1,0 +1,21 @@
+[32m2023-10-24 19:39:31 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 49cef115-f0f7-4ba6-a43e-6ca96534a341 - 42292 - LOGS_CAPTURED - Started capturing logs in process (pid: 42292).
+[32m2023-10-24 19:39:31 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 49cef115-f0f7-4ba6-a43e-6ca96534a341 - 42292 - taxi_zones - STEP_START - Started execution of step "taxi_zones".
+[32m2023-10-24 19:39:31 +0530[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - 49cef115-f0f7-4ba6-a43e-6ca96534a341 - 42292 - taxi_zones - STEP_FAILURE - Execution of step "taxi_zones" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "taxi_zones"::
+
+duckdb.duckdb.IOException: IO Error: Cannot open file "c:\users\antonyjosephraj\antony5\dagster_university\data\staging\data.duckdb": The process cannot access the file because it is being used by another process.
+
+
+Stack Trace:
+  File "C:\Users\AntonyJosephRaj\antony5\test2\lib\site-packages\dagster\_core\execution\plan\utils.py", line 54, in op_execution_error_boundary
+    yield
+  File "C:\Users\AntonyJosephRaj\antony5\test2\lib\site-packages\dagster\_utils\__init__.py", line 443, in iterate_with_context
+    next_output = next(iterator)
+  File "C:\Users\AntonyJosephRaj\antony5\test2\lib\site-packages\dagster\_core\execution\plan\compute_generator.py", line 132, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+  File "C:\Users\AntonyJosephRaj\antony5\test2\lib\site-packages\dagster\_core\execution\plan\compute_generator.py", line 126, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+  File "C:\Users\AntonyJosephRaj\antony5\dagster_university\dagster_university\assets.py", line 82, in taxi_zones
+    conn = duckdb.connect(database = database_url)
+[0m

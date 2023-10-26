@@ -1,0 +1,7 @@
+[32m2023-10-25 16:26:36 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 79d28af0-5331-45bd-967f-1565172640b5 - 19716 - LOGS_CAPTURED - Started capturing logs in process (pid: 19716).
+[32m2023-10-25 16:26:36 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 79d28af0-5331-45bd-967f-1565172640b5 - 19716 - manhattan_map - STEP_START - Started execution of step "manhattan_map".
+[32m2023-10-25 16:26:37 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 79d28af0-5331-45bd-967f-1565172640b5 - 19716 - manhattan_map - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2023-10-25 16:26:37 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 79d28af0-5331-45bd-967f-1565172640b5 - manhattan_map - Writing file at: C:\Users\AntonyJosephRaj\antony5\dagster_university\tmp7t02xcbr\storage\manhattan_map using PickledObjectFilesystemIOManager...
+[32m2023-10-25 16:26:37 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 79d28af0-5331-45bd-967f-1565172640b5 - 19716 - manhattan_map - ASSET_MATERIALIZATION - Materialized value manhattan_map.
+[32m2023-10-25 16:26:37 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 79d28af0-5331-45bd-967f-1565172640b5 - 19716 - manhattan_map - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2023-10-25 16:26:37 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 79d28af0-5331-45bd-967f-1565172640b5 - 19716 - manhattan_map - STEP_SUCCESS - Finished execution of step "manhattan_map" in 1.2s.

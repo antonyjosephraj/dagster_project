@@ -1,0 +1,2 @@
+[32m2023-10-25 16:33:56 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - bc9ae7c5-2b07-4136-ba9c-1f25c0d35a3b - 24636 - LOGS_CAPTURED - Started capturing logs in process (pid: 24636).
+[32m2023-10-25 16:33:56 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - bc9ae7c5-2b07-4136-ba9c-1f25c0d35a3b - 24636 - manhattan_map - STEP_START - Started execution of step "manhattan_map".

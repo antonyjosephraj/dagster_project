@@ -1,0 +1,39 @@
+from dagster import Definitions, load_assets_from_modules
+from .resources import database_resource
+from . import assets, metrics, requests
+from .jobs import trip_update_job, weekly_update_job, adhoc_request_job
+from .schedules import trip_update_schedule, weekly_update_schedule
+from .sensors import adhoc_request_sensor
+
+
+trip_assets = load_assets_from_modules([assets])
+# metric_assets = load_assets_from_modules([metrics])
+metric_assets = load_assets_from_modules(
+  modules=[metrics],
+  group_name="metrics",
+)
+# request_assets = load_assets_from_modules([requests])
+request_assets = load_assets_from_modules(
+  modules=[requests],
+  group_name="requests",
+)
+
+all_jobs = [trip_update_job, weekly_update_job, adhoc_request_job]
+all_schedules = [trip_update_schedule, weekly_update_schedule]
+all_sensors = [adhoc_request_sensor]
+
+defs = Definitions(
+	assets=[*trip_assets, *metric_assets, *request_assets],
+		resources={
+    	"database": database_resource,
+  },
+  jobs=all_jobs,
+  schedules=all_schedules,
+  sensors=all_sensors
+)
+
+
+
+
+# from .schedules import trip_update_schedule, weekly_update_schedule
+# from ..jobs import weekly_update_job, trip_update_job

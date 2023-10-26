@@ -1,0 +1,7 @@
+[32m2023-10-26 10:33:37 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_0 - e016f995-920a-4453-9239-4e3338b027e1 - 17784 - LOGS_CAPTURED - Started capturing logs in process (pid: 17784).
+[32m2023-10-26 10:33:37 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_0 - e016f995-920a-4453-9239-4e3338b027e1 - 17784 - manhattan_stats - STEP_START - Started execution of step "manhattan_stats".
+[32m2023-10-26 10:33:42 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_0 - e016f995-920a-4453-9239-4e3338b027e1 - 17784 - manhattan_stats - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2023-10-26 10:33:42 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_0 - e016f995-920a-4453-9239-4e3338b027e1 - manhattan_stats - Writing file at: C:\Users\AntonyJosephRaj\antony5\dagster_university\tmpx36cyrfe\storage\manhattan_stats using PickledObjectFilesystemIOManager...
+[32m2023-10-26 10:33:42 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_0 - e016f995-920a-4453-9239-4e3338b027e1 - 17784 - manhattan_stats - ASSET_MATERIALIZATION - Materialized value manhattan_stats.
+[32m2023-10-26 10:33:42 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_0 - e016f995-920a-4453-9239-4e3338b027e1 - 17784 - manhattan_stats - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2023-10-26 10:33:42 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_0 - e016f995-920a-4453-9239-4e3338b027e1 - 17784 - manhattan_stats - STEP_SUCCESS - Finished execution of step "manhattan_stats" in 4.73s.

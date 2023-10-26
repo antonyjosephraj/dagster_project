@@ -1,0 +1,6 @@
+[32m2023-10-25 22:10:03 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_1 - edd114e9-384d-4bc6-9fbb-dfb5e308e168 - 31160 - LOGS_CAPTURED - Started capturing logs in process (pid: 31160).
+[32m2023-10-25 22:10:03 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_1 - edd114e9-384d-4bc6-9fbb-dfb5e308e168 - 31160 - taxi_trips_file - STEP_START - Started execution of step "taxi_trips_file".
+Exception while writing logger call to event log: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Exception while writing logger call to event log: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)

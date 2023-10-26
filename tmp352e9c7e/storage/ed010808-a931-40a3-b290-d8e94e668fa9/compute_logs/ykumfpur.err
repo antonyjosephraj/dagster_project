@@ -1,0 +1,23 @@
+[32m2023-10-25 21:40:55 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_1 - ed010808-a931-40a3-b290-d8e94e668fa9 - 11316 - LOGS_CAPTURED - Started capturing logs in process (pid: 11316).
+[32m2023-10-25 21:40:55 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_1 - ed010808-a931-40a3-b290-d8e94e668fa9 - 11316 - taxi_trips_file - STEP_START - Started execution of step "taxi_trips_file".
+[32m2023-10-25 21:41:03 +0530[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_1 - ed010808-a931-40a3-b290-d8e94e668fa9 - 11316 - taxi_trips_file - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2023-10-25 21:41:03 +0530[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB_1 - ed010808-a931-40a3-b290-d8e94e668fa9 - 11316 - taxi_trips_file - STEP_FAILURE - Execution of step "taxi_trips_file" failed.
+
+dagster._core.errors.DagsterExecutionHandleOutputError: Error occurred while handling output "result" of step "taxi_trips_file"::
+
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:\\Users\\AntonyJosephRaj\\antony5\\dagster_university\\tmp352e9c7e\\storage\\taxi_trips_file'
+
+Stack Trace:
+  File "C:\Users\AntonyJosephRaj\antony5\test2\lib\site-packages\dagster\_core\execution\plan\utils.py", line 54, in op_execution_error_boundary
+    yield
+  File "C:\Users\AntonyJosephRaj\antony5\test2\lib\site-packages\dagster\_utils\__init__.py", line 443, in iterate_with_context
+    next_output = next(iterator)
+  File "C:\Users\AntonyJosephRaj\antony5\test2\lib\site-packages\dagster\_core\execution\plan\execute_step.py", line 722, in _gen_fn
+    gen_output = output_manager.handle_output(output_context, output.value)
+  File "C:\Users\AntonyJosephRaj\antony5\test2\lib\site-packages\dagster\_core\storage\upath_io_manager.py", line 451, in handle_output
+    self.make_directory(path.parent)
+  File "C:\Users\AntonyJosephRaj\antony5\test2\lib\site-packages\dagster\_core\storage\upath_io_manager.py", line 115, in make_directory
+    path.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\AntonyJosephRaj\AppData\Local\Programs\Python\Python310\lib\pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+[0m
